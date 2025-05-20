@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Clientes con Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gestión de Clientes Avanzada</h1>
+    <p>Esta es la sección principal de tu página.</p>
+
+    <button id="show-clients-button" class="action-button">Mostrar Clientes</button>
+
+    <p>Continúa con el contenido de tu página...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+    <div id="clients-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Listado Detallado de Clientes</h2>
+                <button id="close-modal-button" class="close-modal-button">X</button>
+            </div>
+            <div class="modal-body">
+                <p>Aquí puedes tener una tabla grande, un formulario complejo, o una lista de clientes muy extensa.</p>
+                
+                <table class="clients-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Última Compra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>001</td><td>Ana García</td><td>ana@email.com</td><td>123-456-7890</td><td>2024-03-15</td></tr>
+                        <tr><td>002</td><td>Luis Pérez</td><td>luis@email.com</td><td>987-654-3210</td><td>2024-04-20</td></tr>
+                        <tr><td>003</td><td>Marta López</td><td>marta@email.com</td><td>555-111-2222</td><td>2024-01-10</td></tr>
+                        <tr><td>004</td><td>Juan Rodríguez</td><td>juan@email.com</td><td>333-444-5555</td><td>2024-05-01</td></tr>
+                        <tr><td>005</td><td>Sofía Martínez</td><td>sofia@email.com</td><td>666-777-8888</td><td>2023-11-20</td></tr>
+                        <tr><td>006</td><td>Pedro Sánchez</td><td>pedro@email.com</td><td>999-000-1111</td><td>2024-02-28</td></tr>
+                        <tr><td>007</td><td>Elena Gómez</td><td>elena@email.com</td><td>111-222-3333</td><td>2024-03-05</td></tr>
+                        <tr><td>008</td><td>Carlos Díaz</td><td>carlos@email.com</td><td>444-555-6666</td><td>2024-04-10</td></tr>
+                        <tr><td>009</td><td>Laura Fernández</td><td>laura@email.com</td><td>777-888-9999</td><td>2024-05-18</td></tr>
+                        <tr><td>010</td><td>Diego Ruiz</td><td>diego@email.com</td><td>222-333-4444</td><td>2023-12-01</td></tr>
+                        <tr><td>011</td><td>Fernando Gutiérrez</td><td>fernando@email.com</td><td>123-123-1234</td><td>2024-01-20</td></tr>
+                        <tr><td>012</td><td>Gabriela Soto</td><td>gabriela@email.com</td><td>456-456-4567</td><td>2024-02-05</td></tr>
+                        <tr><td>013</td><td>Héctor Castro</td><td>hector@email.com</td><td>789-789-7890</td><td>2024-03-10</td></tr>
+                        <tr><td>014</td><td>Isabel Torres</td><td>isabel@email.com</td><td>101-010-1010</td><td>2024-04-15</td></tr>
+                        <tr><td>015</td><td>Javier Vargas</td><td>javier@email.com</td><td>202-020-2020</td><td>2024-05-01</td></tr>
+                        <tr><td>016</td><td>Karen Flores</td><td>karen@email.com</td><td>303-030-3030</td><td>2023-11-10</td></tr>
+                        <tr><td>017</td><td>Manuel Reyes</td><td>manuel@email.com</td><td>404-040-4040</td><td>2024-01-01</td></tr>
+                        <tr><td>018</td><td>Natalia Cruz</td><td>natalia@email.com</td><td>505-050-5050</td><td>2024-02-14</td></tr>
+                        <tr><td>019</td><td>Oscar Morales</td><td>oscar@email.com</td><td>606-060-6060</td><td>2024-03-25</td></tr>
+                        <tr><td>020</td><td>Paola Ríos</td><td>paola@email.com</td><td>707-070-7070</td><td>2024-04-30</td></tr>
+                    </tbody>
+                </table>
+
+                <p>Este es el final del contenido de los clientes. Podría haber más texto, imágenes, etc.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="action-button">Guardar Cambios</button>
+                <button class="secondary-button" id="another-close-button">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

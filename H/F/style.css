@@ -1,0 +1,235 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f2f7; /* Un fondo más claro para la página */
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.action-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Para que ocupe su propia línea */
+    margin: 20px auto; /* Centrar el botón */
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: #6c757d; /* Gris */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268;
+}
+
+
+/* MODAL STYLES */
+
+/* Fondo oscuro que cubre toda la pantalla */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase para ocultar el modal */
+.modal-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* El contenido real del modal (el "cuadro" blanco) */
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    width: 90%;
+    max-width: 650px; /* Tamaño más cercano al de tu imagen de referencia */
+    height: 80vh; /* Altura total del modal, 80% del viewport height */
+    max-height: 700px; /* Altura máxima fija si la pantalla es muy grande */
+    display: flex;
+    flex-direction: column; /* Organiza header, top-section, body y footer en columna */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Importante para que el contenido no desborde las esquinas redondeadas */
+}
+
+/* Animación de entrada para el modal-content */
+.modal-overlay.hidden .modal-content {
+    transform: translateY(-20px);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.modal-header h3 { /* Cambiado a h3 para el título del modal */
+    margin: 0;
+    color: #34495e;
+    font-size: 1.4em; /* Tamaño del título */
+}
+
+.close-modal-button {
+    background: none;
+    border: none;
+    font-size: 26px; /* "X" más grande */
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s ease;
+}
+
+.close-modal-button:hover {
+    color: #333;
+}
+
+/* Sección Superior (30%) - Información clave */
+.modal-top-section {
+    padding: 15px 25px; /* Padding similar al header */
+    border-bottom: 1px solid #eee;
+    background-color: #ffffff; /* Fondo blanco */
+    flex-basis: 30%; /* Ocupa el 30% del espacio vertical disponible */
+    flex-shrink: 0; /* Evita que se encoja */
+    /* overflow-y: auto; */ /* Si esta sección también puede tener scroll */
+}
+
+.modal-top-section p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.modal-top-section strong {
+    color: #333;
+}
+
+
+/* Sección Central (50%) - Contenido principal dinámico */
+.modal-body {
+    padding: 15px 25px; /* Padding similar a las otras secciones */
+    flex-grow: 1; /* Ocupa todo el espacio restante disponible */
+    flex-basis: 50%; /* Intenta ocupar el 50% del espacio si hay suficiente */
+    overflow-y: auto; /* IMPORTANTE: Habilita el scroll dentro del cuerpo si el contenido excede la altura */
+    background-color: #fcfcfc; /* Un ligero tono para diferenciar */
+}
+
+.modal-body h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Estilos para la tabla dentro del modal-body */
+.visits-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio después de la tabla */
+    font-size: 0.9em;
+}
+
+.visits-table th, .visits-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: left;
+}
+
+.visits-table th {
+    background-color: #eaf6fc; /* Azul claro */
+    color: #4a6c8e;
+}
+
+.visits-table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.visits-table tbody tr:hover {
+    background-color: #eaf2f8;
+}
+
+
+/* Sección Inferior (20%) - Opciones/Botones */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    align-items: center; /* Centra verticalmente los botones */
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-shrink: 0; /* Evita que se encoja */
+    flex-basis: 20%; /* Intenta ocupar el 20% del espacio */
+}
+
+/* Media query para hacer el modal más pequeño en pantallas chicas */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-width: none; /* Elimina max-width para pantallas pequeñas */
+        height: 95vh; /* Ocupa más altura en pantallas pequeñas */
+    }
+
+    .modal-header h3 {
+        font-size: 1.2em;
+    }
+
+    .close-modal-button {
+        font-size: 22px;
+    }
+
+    .modal-top-section, .modal-body, .modal-footer {
+        padding: 10px 15px; /* Reduce padding para pantallas pequeñas */
+    }
+
+    .action-button, .secondary-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.action-button {
+    background-color: #007bff; /* Azul */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: #6c757d; /* Gris */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #5a6268;
+}
+
+
+/* MODAL STYLES */
+
+/* Fondo oscuro que cubre toda la pantalla */
+.modal-overlay {
+    position: fixed; /* Fija la posición en relación a la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Color oscuro semi-transparente */
+    display: flex; /* Para centrar el contenido del modal */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase para ocultar el modal */
+.modal-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* El contenido real del modal (el "cuadro" blanco) */
+.modal-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    width: 90%; /* Ancho responsivo, 90% del contenedor (la ventana) */
+    max-width: 800px; /* Pero no más de 800px */
+    max-height: 90vh; /* Altura máxima del 90% del viewport height */
+    display: flex;
+    flex-direction: column; /* Para organizar header, body y footer */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+/* Animación de entrada para el modal-content */
+.modal-overlay.hidden .modal-content {
+    transform: translateY(-20px); /* Ligeramente hacia arriba al ocultarse */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #34495e;
+    font-size: 1.5em;
+}
+
+.close-modal-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s ease;
+}
+
+.close-modal-button:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 25px;
+    flex-grow: 1; /* Permite que el cuerpo ocupe todo el espacio disponible */
+    overflow-y: auto; /* IMPORTANTE: Habilita el scroll dentro del cuerpo si el contenido excede la altura */
+}
+
+/* Estilos para la tabla dentro del modal (ejemplo) */
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.clients-table th, .clients-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.clients-table th {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.clients-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.clients-table tbody tr:hover {
+    background-color: #e2f4f8;
+}
+
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    padding: 15px 25px;
+    border-top: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

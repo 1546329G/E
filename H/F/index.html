@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Paciente con Modal Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Sistema de Gestión de Pacientes</h1>
+    <p>Haz clic en el botón para ver la información detallada del paciente.</p>
+
+    <button id="show-patient-info-button" class="action-button">Mostrar Información del Paciente</button>
+
+    <p>Continúa con el contenido de tu página...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div id="patient-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Información del Paciente</h3>
+                <button id="close-modal-button" class="close-modal-button">X</button>
+            </div>
+            <div class="modal-top-section">
+                <p><strong>ID:</strong> 22</p>
+                <p><strong>Nombre:</strong> Gandy Humri</p>
+                <p><strong>DNI:</strong> 70846805</p>
+                <p><strong>Sexo:</strong> Femenino</p>
+                <p><strong>Diagnóstico:</strong> Raibioso</p>
+                <p><strong>Fecha Nacimiento:</strong> 03/03/2006</p>
+                <p><strong>Dirección:</strong> Av. Tarata 770</p>
+                <p><strong>Nacionalidad:</strong> Peruana</p>
+                <p><strong>Doctor Asignado:</strong> Sofía Ramírez</p>
+            </div>
+
+            <div class="modal-body">
+                <h4>Historial de Visitas</h4>
+                <p>Este es el espacio para texto o tablas generadas dinámicamente desde la base de datos.</p>
+                <table class="visits-table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Doctor</th>
+                            <th>Diagnóstico Breve</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>19/05/2025</td><td>Sofía Ramírez</td><td>Revisión de rutina, todo en orden.</td></tr>
+                        <tr><td>10/02/2025</td><td>Dr. Mendoza</td><td>Control de seguimiento por gripe.</td></tr>
+                        <tr><td>01/11/2024</td><td>Dra. Rojas</td><td>Consulta inicial por dolor de cabeza.</td></tr>
+                        <tr><td>05/08/2024</td><td>Dr. García</td><td>Chequeo anual y análisis de sangre.</td></tr>
+                        <tr><td>22/04/2024</td><td>Sofía Ramírez</td><td>Revisión de rutina, todo en orden.</td></tr>
+                        <tr><td>15/01/2024</td><td>Dr. Mendoza</td><td>Control de seguimiento por gripe.</td></tr>
+                        <tr><td>03/10/2023</td><td>Dra. Rojas</td><td>Consulta inicial por dolor de cabeza.</td></tr>
+                        <tr><td>08/07/2023</td><td>Dr. García</td><td>Chequeo anual y análisis de sangre.</td></tr>
+                        <tr><td>01/04/2023</td><td>Sofía Ramírez</td><td>Revisión de rutina, todo en orden.</td></tr>
+                        <tr><td>20/12/2022</td><td>Dr. Mendoza</td><td>Control de seguimiento por gripe.</td></tr>
+                        <tr><td>05/09/2022</td><td>Dra. Rojas</td><td>Consulta inicial por dolor de cabeza.</td></tr>
+                    </tbody>
+                </table>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Más contenido de texto para demostrar el scroll en esta sección del 50%.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="action-button">Editar Datos</button>
+                <button class="secondary-button">Generar Reporte</button>
+                <button class="secondary-button" id="another-close-button">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
